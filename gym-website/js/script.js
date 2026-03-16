@@ -1,0 +1,96 @@
+// Modern Fitness Gym Website JavaScript
+// Features: Dark/Light mode, search/filter, form validation + EmailJS, smooth scroll, AOS
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
+
+  // Smooth scrolling for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Dark/Light mode toggle
+  const darkToggle = document.getElementById('darkToggle');
+  if (darkToggle) {
+    darkToggle.addEventListener('click', function() {
+      document.body.classList.toggle('light-mode');
+      const icon = this.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-sun');
+        icon.classList.toggle('fa-moon');
+      }
+    });
+  }
+
+  // Trainers/Services search filter
+  const searchInput = document.getElementById('trainersSearch');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.trainers .card, .services .card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  }
+
+  // Contact Form handling with validation and EmailJS
+  const contactForm = document.getElementById('contactForm');
+  const successMsg = document.getElementById('successMsg');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      if (!name || !email || !message) {
+        alert('Please fill all fields.');
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email.');
+        return;
+      }
+      
+      // EmailJS - Replace with your keys
+      emailjs.init('YOUR_PUBLIC_KEY'); // Free from emailjs.com
+      
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: name,
+        from_email: email,
+        message: message
+      }).then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        successMsg.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => successMsg.style.display = 'none', 5000);
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Submission failed. Please try again.');
+      });
+    });
+  }
+});
+
+// EmailJS CDN will be in HTML
+

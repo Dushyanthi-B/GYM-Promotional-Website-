@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Fitness Gym - Join the Strongest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <div class="logo-nav">Elite Gym</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkToggle">
+        <i class="fas fa-moon"></i> Toggle
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero" data-aos="zoom-in">
+src="images/logo.jpg" alt="Elite Fitness Gym Logo" class="logo">
+    <h1 data-aos="fade-up" data-aos-delay="200">Join the Elite</h1>
+    <p data-aos="fade-up" data-aos-delay="400">Transform your body with our premium fitness facilities, expert trainers, and unbeatable membership plans. Become the strongest version of yourself.</p>
+    <button class="btn-primary" onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})" data-aos="fade-up" data-aos-delay="600">
+      Join Now
+    </button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Elite Fitness Gym</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Located in the heart of the city, Elite Fitness Gym offers state-of-the-art equipment, professional trainers, and a community dedicated to strength and wellness. Our black & gold themed facility provides the perfect environment to achieve your fitness goals.</p>
+    </div>
+  </section>
+
+  <!-- Services / Features Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+      <div class="grid services-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="card">
+          <i class="fas fa-dumbbell" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+          <h3>Personal Training</h3>
+          <p>Customized one-on-one sessions with certified trainers.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-heartbeat" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+          <h3>Cardio Equipment</h3>
+          <p>Latest treadmills, bikes, and ellipticals for fat burning.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-users" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+          <h3>Group Classes</h3>
+          <p>High-energy classes like HIIT, yoga, and crossfit.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-apple-alt" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+          <h3>Nutrition Guidance</h3>
+          <p>Personalized meal plans and dietary coaching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section id="trainers" class="trainers" style="background:var(--section-bg);">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Elite Trainers</h2>
+      <div class="trainers-search" data-aos="fade-up" data-aos-delay="200">
+        <input type="search" id="trainersSearch" class="search-input" placeholder="Search trainers...">
+      </div>
+      <div class="grid" data-aos="fade-up" data-aos-delay="400">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1574688058127-737ec5a98f9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="John Doe">
+          <h3>John Doe</h3>
+          <p>Head Trainer | Bodybuilding Specialist</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Jane Smith">
+          <h3>Jane Smith</h3>
+          <p>Senior Coach | CrossFit Expert</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mike Johnson">
+          <h3>Mike Johnson</h3>
+          <p>Nutrition Coach | Weight Loss</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Plans Section -->
+  <section id="plans">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Membership Plans</h2>
+      <div class="grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="card pricing-card">
+          <h3>Basic</h3>
+          <div class="price">$29<span>/mo</span></div>
+          <ul class="features-list">
+            <li>24/7 Gym Access</li>
+            <li>Basic Equipment</li>
+            <li>Free Parking</li>
+          </ul>
+          <button class="btn-primary">Choose Basic</button>
+        </div>
+        <div class="card pricing-card">
+          <h3>Standard</h3>
+          <div class="price">$59<span>/mo</span></div>
+          <ul class="features-list">
+            <li>Everything in Basic</li>
+            <li>Group Classes</li>
+            <li>Personal Training (2x/week)</li>
+            <li>Lockers</li>
+          </ul>
+          <button class="btn-primary">Choose Standard</button>
+        </div>
+        <div class="card pricing-card">
+          <h3>Premium</h3>
+          <div class="price">$99<span>/mo</span></div>
+          <ul class="features-list">
+            <li>Everything in Standard</li>
+            <li>Unlimited Personal Training</li>
+            <li>Nutrition Plans</li>
+            <li>Sauna & Recovery</li>
+            <li>Priority Access</li>
+          </ul>
+          <button class="btn-primary">Choose Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background:var(--section-bg);">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <form id="contactForm" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+        <div class="success-msg" id="successMsg">Thank you! Your message has been sent. We'll contact you soon.</div>
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
