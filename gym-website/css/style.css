@@ -10,8 +10,10 @@
 }
 
 body.light-mode {
-  --bg: #111111;
-  --section-bg: #222222;
+  --bg: #f8f9fa;
+  --section-bg: #ffffff;
+  --text: #333333;
+  --secondary: #5a4a2a;
 }
 
 * {

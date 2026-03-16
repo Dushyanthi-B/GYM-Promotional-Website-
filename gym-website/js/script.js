@@ -23,16 +23,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Dark/Light mode toggle
+// Enhanced Dark/Light mode toggle with persistence
   const darkToggle = document.getElementById('darkToggle');
   if (darkToggle) {
+    const icon = darkToggle.querySelector('i');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-mode');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
     darkToggle.addEventListener('click', function() {
       document.body.classList.toggle('light-mode');
-      const icon = this.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-sun');
-        icon.classList.toggle('fa-moon');
-      }
+      const isLight = document.body.classList.contains('light-mode');
+      icon.classList.toggle('fa-sun', isLight);
+      icon.classList.toggle('fa-moon', !isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   }
 
