@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // EmailJS - Replace with your keys
-      emailjs.init('YOUR_PUBLIC_KEY'); // Free from emailjs.com
+emailjs.init('i1Mei_LyLClsI3Yj0');
       
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+emailjs.send('service_f146wjm', 'template_8dg6k7d', {
         from_name: name,
         from_email: email,
         message: message
