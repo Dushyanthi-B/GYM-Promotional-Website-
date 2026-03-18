@@ -1,58 +1,32 @@
-# Fitness Gym Promotional Website
+# GYM Promotional Website
 
-## Overview
-Modern responsive single-page website for a fitness gym brand. Features hero, about, services, trainers, plans, contact form with EmailJS submission. Black/gold theme, animations (AOS), dark/light toggle, search/filter, smooth scroll.
+## Project Name
+Elite Fitness Gym
 
-Colors:
-- Primary: #D4A017 (gold)
-- Secondary: #3B2A12 (dark brown)
-- BG: #000000
-- Section: #2E2E2E
-- Text: #D9D9D9
+## Tech Stack
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- AOS (animations)
+- Font Awesome (icons)
+- EmailJS (contact forms)
 
-## Quick Start
-1. Open `index.html` in browser.
-2. For form: Sign up free at emailjs.com, replace `YOUR_SERVICE_ID`, `YOUR_TEMPLATE_ID`, `YOUR_PUBLIC_KEY` in script.js.
+## Setup Instructions
+1. Clone/download the repository
+2. Open `index.html` in any modern web browser
+3. For contact form functionality:
+   - Sign up for free at [EmailJS](https://www.emailjs.com/)
+   - Replace `YOUR_SERVICE_ID`, `YOUR_TEMPLATE_ID`, `YOUR_PUBLIC_KEY` in `js/script.js`
 
-## Structure
-```
-gym-website/
-├── index.html
-├── css/style.css
-├── js/script.js
-├── images/ (optional, using URL images)
-└── README.md
-```
+No build tools or servers required. Fully static and responsive.
 
-## Features
-- Fully responsive (mobile/tablet/desktop)
-- Smooth animations
-- Dark/light mode toggle
-- Search/filter trainers/services
-- Form validation + EmailJS API submit (success message)
-- Fitness theme (bodybuilding logo)
 
-## Deploy
-1. **GitHub**: 
-   - `git init`
-   - `git add .`
-   - `git commit -m "Initial gym website"`
-   - `git remote add origin https://github.com/YOUR_USERNAME/gym-website.git`
-   - `git push -u origin main`
-2. **Netlify**:
-   - Drag `gym-website` folder to netlify.com/drop
-   - Or connect GitHub repo for auto-deploy.
+## Live Link
+https://dushyanthi-b.github.io/GYM-Promotional-Website-/
 
-## Figma Layout Structure (Textual)
-- **Hero**: Full viewport height, center logo + H1 "Join the Elite" + gold CTA "Join Now" btn. Dark bg.
-- **About**: Padding, centered text.
-- **Services**: 4-card grid (responsive), icons + titles.
-- **Trainers**: 3-card grid, photo/name/bio, search input above.
-- **Plans**: 3 pricing cards, features list.
-- **Contact**: Form centered, name/email/message.
 
-Edit CSS/JS as needed. Add local images to `images/` and update paths.
+## Figma Design
+https://www.figma.com/design/cTQi6PAYfiNLiGR4wUevpf/Gym-Promotional-Website?node-id=0-1&t=KGl4HFQtLLY5U0uw-1
 
-## Tech
-HTML5/CSS3/JS | AOS | EmailJS
-
+## GitHub repository link
+https://github.com/Dushyanthi-B/GYM-Promotional-Website-
