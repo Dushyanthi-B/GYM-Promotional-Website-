@@ -2,11 +2,12 @@
 /* CSS Variables */
 :root {
   --primary: #D4A017;
-  --secondary: #3B2A12;
+--secondary: #3B2A14;
+  --dark-brown: #3B2A14;
   --bg: #000000;
   --section-bg: #2E2E2E;
   --text: #D9D9D9;
-  --light-text: #f0f0f0;
+  --light-text: #ffffff;
 }
 
 body.light-mode {
@@ -16,6 +17,13 @@ body.light-mode {
   --secondary: #5a4a2a;
 }
 
+body.light-mode .hero h1,
+body.light-mode .hero p {
+  color: #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +31,7 @@ body.light-mode {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
@@ -188,7 +196,7 @@ section {
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--primary);
+  background: var(--dark-brown);
 }
 
 .card:hover {
@@ -314,9 +322,36 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .nav-container {
+    position: relative;
+  }
+  
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links a {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  }
+  
+  #darkToggle {
+    order: 3;
+    margin-left: auto;
+  }
+
   
   .hero {
     padding: 100px 20px 40px;
@@ -370,8 +405,4 @@ section {
   transform: scale(1.1);
 }
 
-/* Scroll indicator */
-html {
-  scroll-padding-top: 80px;
-}
 
